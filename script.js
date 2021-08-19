@@ -15,10 +15,11 @@ btn.addEventListener("click", ()=>{
 	return response.json();
 }).then((data) => {
     joke.innerHTML =  data.body[0].setup + "<br>" + data.body[0].punchline;
-   joke.innerHTML = "Error can't fetch a joke"
+  
 })
 .catch(err => {
 	console.error(err);
+	joke.innerHTML = "Error can't fetch a joke"
 });
     
 })
